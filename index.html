@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>Exam - 5</title>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <div class="header">
+        <div class="header-wrapper">
+          <p>Time: <time class="timer"></time></p>
+          <h1 class="title"></h1>
+          <p>Count: <span class="count"> </span></p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="container">
+        <ul class="list">
+
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <div class="game-start">
+    <form class="form" action="" method="post">
+      <select id="option" class="select" required>
+        <option value="" hidden>Kategoriyani tanlang</option>
+        <option value="all">Barcha kategoriyalar </option>
+        <option value="easy">Oson</option>
+        <option value="medium">O'rta</option>
+        <option value="hard">Qiyin</option>
+      </select>
+      <select class="select-time" required>
+        <option hidden value="">Vaqtni tanlang</option>
+        <option value="3">3 min</option>
+        <option value="5">5 min</option>
+        <option value="10">10 min</option>
+      </select>
+      <button class="form-btn" type="submit">O'yin</button>
+    </form>
+  </div>
+
+  <div class="modal">
+    <div class="modal-card">
+      <h2 class="modal-title"></h2>
+      <p class="modal-count"></p>
+      <p class="modal-error"></p>
+      <ul class="modal-list"></ul>
+      <button class="modal-btn">siz topa olmagan belgilar</button>
+      <button class="modal-close">X</button>
+    </div>
+    
+  </div>
+
+  <script src="./signs.js"></script>
+  <script src="./main.js"></script>
+</body>
+</html>

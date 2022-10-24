@@ -1,0 +1,292 @@
+*{
+    box-sizing: border-box;
+}
+.container{
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+body{
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow: hidden;
+}
+.game-start{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url("../images/back-to-future.jpg");
+    
+}
+.form{
+    max-width: 600px;
+    height: 350px;
+    margin: 0 auto;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgba(39, 39, 39, 0.802);
+    border-radius: 6px;
+}
+select{
+    width: 240px;
+    padding: 10px;
+    border-radius: 6px;
+    outline: none;
+    background-color: transparent;
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+select *{
+    background-color: rgb(39, 39, 39);
+    font-size: 17px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.form-btn{
+    width: 240px;
+    background-color: green;
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2.2px;
+}
+.form-btn:hover{
+    opacity: 0.6;
+}
+select:focus{
+    box-shadow: 0 0 3px 2px green;
+}
+
+header{
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+    background-color: rgb(68, 68, 68);
+    padding: 20px;
+    margin-bottom: 100px;
+    z-index: 100;
+}
+main{
+    height: 100vh;
+    display: none;
+    padding-top: 20px;
+    margin-bottom: 200px;
+    background-image: url("../images/sign-road-sunlight-hd-2K-wallpaper.jpg");
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-wrapper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    justify-content: space-between;
+}
+.title{
+    color: #fff;
+}
+.list{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    list-style-type: none;
+    overflow-y: scroll;
+    margin: 0;
+    padding: 150px 0;
+}
+.list > li{
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.774);
+    padding: 20px;
+    color: #fff;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+.timer, .count{
+    font-weight: 900;
+}
+
+.card{
+    position: relative;
+    z-index: 10;
+}
+.card-img {
+    width: 160px;
+    height: 140px;
+}
+.card-title{
+    width: 250px;
+    color: #fff;
+}
+.modal-count{
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+}
+.modal-error{
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+}
+.modal{
+    display: none;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10000;
+    background-color: rgba(0, 0, 0, 0.888);
+}
+.modal-card{
+    max-width: 600px;
+    height: 500px;
+    position: absolute;
+    top: 220px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.826);
+}
+.show-modal{
+    display: block;
+}
+.modal-list{
+    /* width: 400px; */
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+}
+.modal-list > li {
+    margin: 10px auto; 
+
+}
+.modal-list > li > .card{
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.modal-title{
+    color: #fff;
+    text-align: center;
+    margin-right: 15px;
+}
+.modal-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    font-weight: 900;
+    background-color: red;
+    color: #fff;
+}
+.modal-btn{
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 15px;
+    margin: 0 auto;
+    width: 400px;
+    padding: 20px;
+    color: #fff;
+    background-color: green;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 2.2px;
+}
+.modal-close:hover{
+    opacity: 0.6;
+}
+.card-img__success{
+    display: none;
+    width: 160px;
+    height: 140px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+.card-img__error{
+    display: none;
+    width: 160px;
+    height: 140px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+.d-block{
+    display: block;
+}
+
+.error{
+    animation-name: errors;
+    animation-duration: .1s;
+}
+
+@keyframes errors {
+    from{
+        transform: translateX(-15px);
+    }
+    to{
+        transform: translateX(15px);
+    }
+}
+@media  screen and (max-width: 1024px) {
+    .title{
+        font-size: 25px;
+        text-align: center;
+    }
+    .card-title{
+        text-align: right;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header-wrapper{
+        flex-direction: column;
+    }
+    .title{
+        font-size: 20px;
+        text-align: center;
+    }
+    main{
+        padding-top: 90px;
+    }
+
+}
+@media screen and (max-width: 439px) {
+    .list{
+        justify-content: center;
+    }
+    .modal-btn{
+        max-width: 320px;
+        font-size: 11px;
+    }
+
+   
+}

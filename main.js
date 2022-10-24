@@ -14,7 +14,7 @@ let elHeader = document.querySelector("header");
 let elMain = document.querySelector("main");
 let elStart = document.querySelector(".game-start");
 
-let easyArray = roadSymbol.slice(0, 3);
+let easyArray = roadSymbol.slice(0, 20);
 let mediumArray = roadSymbol.slice(0, 40);
 let hardArray = roadSymbol.slice(0, 70);
 let errorArray = [];
@@ -44,7 +44,7 @@ elForm.addEventListener("submit", function(evt) {
             createTest(hardArray, elList);
         }
         if (elSelectTime.value == 3) {
-            let fiveMinutes = 60 * 0.2;
+            let fiveMinutes = 60 * 3;
             startTimer(fiveMinutes, elTime);
         }
         if (elSelectTime.value == 5) {

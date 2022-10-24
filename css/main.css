@@ -277,6 +277,9 @@ main{
     main{
         padding-top: 90px;
     }
+    .modal-card{
+        top: 80px;
+    }
 
 }
 @media screen and (max-width: 439px) {
